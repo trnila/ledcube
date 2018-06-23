@@ -1,4 +1,5 @@
 LDFLAGS=-lglut -lGLEW -lGL -lm
+CXXFLAGS=-g -I../common
 NAME=sim
 
 all: $(NAME)

@@ -1,0 +1,59 @@
+Configuration	ledcube
+STM32CubeMX 	4.25.0
+Date	06/23/2018
+MCU	STM32F103C8Tx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SYS	Serial Wire	SYS_JTCK-SWCLK	PA14
+SYS	Serial Wire	SYS_JTMS-SWDIO	PA13
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+TIM1	Internal Clock	TIM1_VS_ClockSourceINT	VP_TIM1_VS_ClockSourceINT
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+10	PA0-WKUP	GPIO_Output	LED_00
+11	PA1	GPIO_Output	LED_01
+12	PA2	GPIO_Output	LED_02
+13	PA3	GPIO_Output	LED_10
+14	PA4	GPIO_Output	LED_11
+15	PA5	GPIO_Output	LED_12
+16	PA6	GPIO_Output	LED_20
+17	PA7	GPIO_Output	LED_21
+18	PB0	GPIO_Output	LED_22
+20	PB2	GPIO_Output	LAYER_0
+21	PB10	GPIO_Output	LAYER_1
+22	PB11	GPIO_Output	LAYER_2
+25	PB12	GPIO_Output	DEBUG
+34	PA13	SYS_JTMS-SWDIO	
+37	PA14	SYS_JTCK-SWCLK	
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : ledcube
+Project Folder : /home/daniel/projects/ledcube/ledcube
+Toolchain / IDE : SW4STM32
+Firmware Package Name and Version : STM32Cube FW_F1 V1.6.1
+
+
+Code Generation Settings : 
+STM32Cube Firmware Library Package : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : Yes
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : Balanced Size/Speed
+
+
+
+
+
+

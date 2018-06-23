@@ -1,0 +1,8 @@
+cmake-build-debug/
+.idea/*
+*.tmp
+.cproject
+.project
+.settings/
+mx.scratch
+.mxproject
