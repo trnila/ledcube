@@ -1,10 +1,8 @@
-#include <main.h>
-#include "stm32f1xx_hal.h"
+#include <algorithm>
+#include <stm32f1xx_hal.h>
 #include <stm32f1xx_hal_gpio.h>
 #include <cmsis_os.h>
-#include <algorithm>
-#include <stm32f1xx_hal_tim.h>
-#include "tim.h"
+#include "main.h"
 #include "space.h"
 #include "animations.h"
 #include "scheduler.h"
@@ -49,14 +47,6 @@ std::vector<Animation*> animations = {
 		new Rain(),
 };
 
-
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-	if(htim == &htim1) {
-		HAL_GPIO_TogglePin(DEBUG_GPIO_Port, DEBUG_Pin);
-	}
-}
-
-
 extern "C" void simulate_task(void const* argument) {
 	TickType_t xLastWakeTime = 0;
 	Scheduler scheduler(3000);
@@ -77,8 +67,6 @@ extern "C" void simulate_task(void const* argument) {
 }
 
 extern "C" void renderer_task(void const * argument) {
-//	HAL_TIM_Base_Start_IT(&htim1);
-
 	for(;;) {
 		for(int z = 0; z < 3; z++) {
 			int i = 0;
