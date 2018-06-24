@@ -77,7 +77,7 @@ extern "C" void simulate_task(void const* argument) {
 }
 
 extern "C" void renderer_task(void const * argument) {
-	HAL_TIM_Base_Start_IT(&htim1);
+//	HAL_TIM_Base_Start_IT(&htim1);
 
 	for(;;) {
 		for(int z = 0; z < 3; z++) {

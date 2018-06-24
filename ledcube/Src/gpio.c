@@ -73,31 +73,36 @@ void MX_GPIO_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct;
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_00_Pin|LED_01_Pin|LED_02_Pin|LED_10_Pin 
-                          |LED_11_Pin|LED_12_Pin|LED_20_Pin|LED_21_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, LAYER_0_Pin|LED_00_Pin|LED_01_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LED_22_Pin|DEBUG_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_02_Pin|LAYER_1_Pin|LED_12_Pin|LED_11_Pin 
+                          |LED_10_Pin|LAYER_2_Pin|LED_22_Pin|LED_21_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LAYER_0_Pin|LAYER_1_Pin|LAYER_2_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, LED_20_Pin|DEBUG_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : PCPin PCPin PCPin */
+  GPIO_InitStruct.Pin = LAYER_0_Pin|LED_00_Pin|LED_01_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PAPin PAPin PAPin PAPin 
                            PAPin PAPin PAPin PAPin */
-  GPIO_InitStruct.Pin = LED_00_Pin|LED_01_Pin|LED_02_Pin|LED_10_Pin 
-                          |LED_11_Pin|LED_12_Pin|LED_20_Pin|LED_21_Pin;
+  GPIO_InitStruct.Pin = LED_02_Pin|LAYER_1_Pin|LED_12_Pin|LED_11_Pin 
+                          |LED_10_Pin|LAYER_2_Pin|LED_22_Pin|LED_21_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PBPin PBPin PBPin PBPin 
-                           PBPin */
-  GPIO_InitStruct.Pin = LED_22_Pin|LAYER_0_Pin|LAYER_1_Pin|LAYER_2_Pin 
-                          |DEBUG_Pin;
+  /*Configure GPIO pins : PBPin PBPin */
+  GPIO_InitStruct.Pin = LED_20_Pin|DEBUG_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);

@@ -59,30 +59,30 @@
 
 /* Private define ------------------------------------------------------------*/
 
-#define LED_00_Pin GPIO_PIN_0
-#define LED_00_GPIO_Port GPIOA
-#define LED_01_Pin GPIO_PIN_1
-#define LED_01_GPIO_Port GPIOA
-#define LED_02_Pin GPIO_PIN_2
+#define LAYER_0_Pin GPIO_PIN_13
+#define LAYER_0_GPIO_Port GPIOC
+#define LED_00_Pin GPIO_PIN_14
+#define LED_00_GPIO_Port GPIOC
+#define LED_01_Pin GPIO_PIN_15
+#define LED_01_GPIO_Port GPIOC
+#define LED_02_Pin GPIO_PIN_0
 #define LED_02_GPIO_Port GPIOA
-#define LED_10_Pin GPIO_PIN_3
-#define LED_10_GPIO_Port GPIOA
-#define LED_11_Pin GPIO_PIN_4
-#define LED_11_GPIO_Port GPIOA
-#define LED_12_Pin GPIO_PIN_5
+#define LAYER_1_Pin GPIO_PIN_1
+#define LAYER_1_GPIO_Port GPIOA
+#define LED_12_Pin GPIO_PIN_2
 #define LED_12_GPIO_Port GPIOA
-#define LED_20_Pin GPIO_PIN_6
-#define LED_20_GPIO_Port GPIOA
+#define LED_11_Pin GPIO_PIN_3
+#define LED_11_GPIO_Port GPIOA
+#define LED_10_Pin GPIO_PIN_4
+#define LED_10_GPIO_Port GPIOA
+#define LAYER_2_Pin GPIO_PIN_5
+#define LAYER_2_GPIO_Port GPIOA
+#define LED_22_Pin GPIO_PIN_6
+#define LED_22_GPIO_Port GPIOA
 #define LED_21_Pin GPIO_PIN_7
 #define LED_21_GPIO_Port GPIOA
-#define LED_22_Pin GPIO_PIN_0
-#define LED_22_GPIO_Port GPIOB
-#define LAYER_0_Pin GPIO_PIN_2
-#define LAYER_0_GPIO_Port GPIOB
-#define LAYER_1_Pin GPIO_PIN_10
-#define LAYER_1_GPIO_Port GPIOB
-#define LAYER_2_Pin GPIO_PIN_11
-#define LAYER_2_GPIO_Port GPIOB
+#define LED_20_Pin GPIO_PIN_0
+#define LED_20_GPIO_Port GPIOB
 #define DEBUG_Pin GPIO_PIN_12
 #define DEBUG_GPIO_Port GPIOB
 
