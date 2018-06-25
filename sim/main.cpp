@@ -30,7 +30,7 @@ std::vector<Animation*> animations = {
 	new Slide(Axis::X),
 	new Slide(Axis::Y),
 	new Slide(Axis::Z),
-	new Kostka(),
+	new Frame(),
 	new Random(3),
 	new Increment(true),
 	new Increment(false),
